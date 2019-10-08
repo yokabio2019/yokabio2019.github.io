@@ -1,0 +1,360 @@
+<!doctype html>
+
+<html lang="ja">
+
+
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+	<link rel="stylesheet" href="Web/common.css">
+
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+	<title>YOKABIO2019</title>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="Web/js/jquery.rwdImageMaps.min.js"></script>
+	<!--メニューがスクロールによって消えたり現れたりする-->
+	<!--http://weboook.blog22.fc2.com/blog-entry-412.html-->
+	<script>
+	$(function() {
+		var menuHeight = $("#menu-wrap2").height();
+		var startPos = 0;
+		$(window).scroll(function(){
+			var currentPos = $(this).scrollTop();
+			if (currentPos > startPos) {
+				if($(window).scrollTop() >= 200) {
+					$("#menu-wrap2").css("top", "-" + menuHeight + "px");
+				}
+			} else {
+			$("#menu-wrap2").css("top", 0 + "px");
+			}
+			startPos = currentPos;
+		
+		})
+	});
+	
+	$(function() {
+		//$("#menu-wrap2").css('background','BLACK');
+		var scrollTop = $(window).scrollTop();
+		if (scrollTop>=5) {
+			$("#menu-wrap2").css('background','rgba(0,0,0,.5)');
+		}
+		$(window).scroll(function(){
+			var scrollTop = $(window).scrollTop();
+			if (scrollTop<=5) {
+				$("#menu-wrap2").css('background','BLACK');
+			} else {
+				$("#menu-wrap2").css('background','rgba(0,0,0,.5)');
+			}		
+		})
+	});
+	</script>
+		
+		<!--
+	$(function() {
+		$(window).scroll(function(){
+			var scrollTop = $(window).scrollTop();
+			if (scrollTop<=5) {
+				$("#menu-wrap").css('background','rgba(0,0,0,.0)');
+			} else {
+				$("#menu-wrap").css('background','rgba(0,0,0,.5)');
+			}		
+		})
+	});
+	-->
+		
+		
+	<!--左のサブメニューをスクロールについてくるようにする-->
+	<script>
+	$(window).on('load resize', function() {
+		var windowWidth = $(window).width();
+		if (windowWidth > 800) {
+			var Pos=3;
+			if(windowWidth > 1500){
+				var Pos=0.0235*(windowWidth-800)/3+"%";
+				if(windowWidth > 1800){
+					var Pos=0.027*(windowWidth-800)/3+"%";
+				}
+			}
+		}
+		$("#na").css('margin-left',Pos);
+		$("#navitop").css('margin-left',Pos);
+		$("#navitop2").css('margin-left',Pos);
+	});
+	</script>
+
+	<script>
+	$(function(){
+		var set = 100;//ウインドウ上部からどれぐらいの位置で変化させるか
+		var boxTop = new Array;
+		var current = -1;
+		//各要素の位置
+		$('.section1').each(function(i) {
+			boxTop[i] = $(this).offset().top;
+		});
+		//最初の要素にclass="on"をつける cghangeNavcurrent(0);
+		changeBox(0);
+		//スクロールした時の処理
+		$(window).scroll(function(){
+			scrollPosition = $(window).scrollTop();
+			//(2)各セクションの位置とスクロール位置を比較して、条件にあったらchangeBoxを実行
+			for (var i = boxTop.length - 1 ; i >= 0; i--) {
+				if ($(window).scrollTop() > boxTop[i] - set) {
+				changeBox(i);
+				break;
+				}
+			};
+		});
+		//ナビの処理
+		function changeBox(secNum) {
+			if (secNum != current) {
+				current = secNum;
+				secNum2 = secNum + 1;//HTML順序用
+				$('#navi li').removeClass('on');
+				$('#navi li:nth-child(' + secNum2 +')').addClass('on');
+				/* 位置によって個別に処理をしたい場合　
+				if (current == 0) {
+				// 現在地がsection1の場合の処理
+				} else if (current == 1) {
+				// 現在地がsection2の場合の処理
+				} else if (current == 2) {
+				// 現在地がsection3の場合の処理
+				}*/
+			}
+		};
+	});
+	</script>
+	<!--左のサブメニューを強調-->
+		
+	<script>
+	$(function() {
+		$('.navToggle').click(function() {
+			$(this).toggleClass('active');
+			
+			if ($(this).hasClass('active')) {
+				$('.globalMenuSp').addClass('active');
+			} else {
+				$('.globalMenuSp').removeClass('active');
+			}
+		});
+	});
+	</script>
+	
+	<!--Top画像の大きさを変化させる-->
+	<script>
+		$(function(){
+			var windowWidth = $(window).width();
+			var windowHeight = $(window).height();
+			if(windowWidth > 1500 && windowHeight > 600){
+				$("header video").css('width',windowWidth);
+				$("header video").css('height',windowHeight);
+			}else{
+				$("header video").css('width', '100%');
+				$("header video").css('height', 'auto');
+			}
+		});
+		$(window).on('load resize', function() {
+			var windowWidth = $(window).width();
+			var windowHeight = $(window).height();
+			if(windowWidth > 1500 && windowHeight > 600){
+				$("header video").css('width',windowWidth);
+				$("header video").css('height',windowHeight);
+			}else{
+				$("header video").css('width', '100%');
+				$("header video").css('height', 'auto');
+			}
+	});
+	</script>
+		
+	<!--スムーススクロール-->
+	<script>
+	$(function(){
+	// #で始まるリンクをクリックしたら実行されます
+	$('a[href^="#"]').click(function() {
+		// スクロールの速度
+		var speed = 400; // ミリ秒で記述
+		var href= $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		var position = target.offset().top;
+		$('body,html').animate({scrollTop:position}, speed, 'swing');
+		return false;
+	});
+	});
+	</script>
+		
+	<!--イメージマップをレスポンシブにする-->
+	<script>
+	$(document).ready(function(e) {
+		$('img[usemap]').rwdImageMaps();
+	})
+	</script>
+</head>
+
+
+
+<body>
+	<!--Topについて-->
+	<header>
+		<video src="Web/img/main.mp4" loop autoplay muted playsinline></video>
+		<a href="#subA"><span></span>Scroll</a>
+	</header>
+		
+	<!--ハンバーガーメニュー-->
+	<div class="navToggle">
+		<span></span><span></span><span></span><span>menu</span>
+	</div>
+	<nav class="globalMenuSp">
+		<ul>
+			<div class="space"></div><div class="space"></div><div class="space"></div><div class="space"></div>
+			<li><a href="Web/Home/Home.html">Home <span class="caret"></span></a></li>
+			<li><a href="Web/Project/Project.html">Project <span class="caret"></span></a></li>
+			<li><a href="Web/Design/Design.html">Design<span class="caret"></span></a></li>
+			<!--<li><a href="Web/Simulation/Simulation.html">Simulation <span class="caret"></span></a></li>-->
+			<li><a href="Web/Experiment/Experiment.html">Experiment <span class="caret"></span></a></li>
+			<li><a href="Web/ELSI/ELSI.html">ELSI<span class="caret"></span></a></li>
+			<li><a href="Web/Team/Team.html">Team</a></li>
+		</ul>
+	</nav>
+		
+			
+	<!--↓ナビゲーションバー(メイン)↓-->
+	<nav id="menu-wrap2">
+		<div class="cp_navi">
+		<ul>
+			<li><a href="Web/Home/Home.html"><img src="Web/img/icon.png" height="40px"><a></li>
+			<li>
+				<a href="Web/Home/Home.html">Home <span class="caret"></span></a>
+				<div>
+				<ul>
+					<li><a href="Web/Home/Home.html#ABSTRACT">Abstract</a></li>
+					<li><a href="Web/Home/Home.html#YOUTUBE">Youtube</a></li>
+				</ul>
+				</div>
+			</li>
+			<li>
+				<a href="Web/Project/Project.html">Project <span class="caret"></span></a>
+				<div>
+				<ul>
+					<li><a href="Web/Project/Project.html#Background">Background</a></li>
+					<li><a href="Web/Project/Project.html#TheProblem">The Problem</a></li>
+					<li><a href="Web/Project/Project.html#OurSolution">Our Solution</a></li>
+					<li><a href="Web/Project/Project.html#ProjectGoal">Project Goal</a></li>
+					<li><a href="Web/Project/Project.html#Future">Future</a></li>
+				</ul>
+				</div>
+			</li>
+			<li>
+				<a href="Web/Design/Design.html">Design<span class="caret"></span></a>
+				<div>
+				<ul>
+					<li><a href="Web/Design/Design.html#DNAorigami">DNA origami</a></li>
+					<li><a href="Web/Design/Design.html#Reactant">Reactant</a></li>
+					<li><a href="Web/Design/Design.html#Conjugation">Conjugation</a></li>
+				</ul>
+				</div>
+			</li>
+			<li>
+				<a href="Web/Simulation/Simulation.html">Simulation <span class="caret"></span></a>
+				<div>
+				<ul>
+					<li><a href="Web/Simulation/Simulation.html#Open">Open</a></li>
+					<li><a href="Web/Simulation/Simulation.html#Close">Close</a></li>
+				</ul>
+				</div>
+			</li>
+			<li>
+				<a href="Web/Experiment/Experiment.html">Experiment <span class="caret"></span></a>
+				<div>
+				<ul>
+					<li><a href="Web/Experiment/Experiment.html#Materials">Materials</a></li>
+					<li><a href="Web/Experiment/Experiment.html#Method">Method</a></li>
+				</ul>
+				</div>
+			</li>
+			<li><a href="Web/Discussion/Discussion.html">Discussion</a></li>
+			<li><a href="Web/Team/Team.html">Team</a></li>
+		</ul>
+		</div>
+	</nav>
+	<!--↑ナビゲーションバー(メイン)↑-->
+		
+	<!--↓ナビゲーションバー(サブ)-->
+	<div id="na">
+		<div id="navitop">
+			<li><a href="Web/Home/Home.html"><img src="Web/img/icon2.png"><a></li>
+		</div>
+	</div>
+	<!--↑ナビゲーションバー(サブ)↑-->
+				
+	<!--↓トップに戻るボタン↓-->
+	<div id="page_top">
+		<i class="fas fa-angle-double-up fa-2x faa-bounce animated-hover top-bottom"></i>
+	<a href="#"></a></div>
+	<!--↑トップに戻るボタン↑-->
+		
+						
+   <!--<div class="space"></div>-->
+		
+
+		
+		
+		
+		
+	<main class="container">
+		
+		<div class="space" id="subA"></div>
+
+		<div class="section1"  id="ABSTRACT">
+			<h1>Abstract</h1>
+			<div class="space"></div>
+			<p>Enzymes are essential substance for all living. For example, the reason why we can take in nutrients through meals is that what we take is broken down by an enzymatic reaction and the nutrients can be absorbed into our body.</p>
+			<div class="space"></div>
+			<p>However, enzymes have some disadvantages. One of the disadvantages is that there are only a few active centers that exist in a bigger enzyme molecule and lowing the enzymatic reaction. To overcome the problem, we came up with the idea to make a new mechanism that does the activity the same as the active center of enzymes to increase the enzymatic reactions’ activity. The method is by connecting the end side of two DNA origamis. Each side of the DNA origami is respectively binding with a substrate and catalyst allowing them to react forcibly when the DNA origami is folded. This mechanism makes non-specific of two molecules could react effectively.</p>
+		</div>
+	
+		<div class="space"></div>
+
+		<div class="section1" id="YOUTUBE">
+			<h1>Youtube</h1>
+			<!--<div class="space"></div>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/-O4PA_ul11g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+		</div>
+						
+		<div class="section1"  id="Materials">
+			<h1>イメージマップ</h1>
+			<img class="imageIn" src="Web/img/map.png" usemap="#image-map">
+			<map name="image-map">
+				<area shape="circle" coords="508,142,96" href="Web/Design/Design.html" target="" alt="blueBall" title="blueBall" />
+				<area shape="circle" coords="509,373,97" href="Web/Design/Design.html" target="" alt="blueBall" title="blueBall" />
+				<area shape="circle" coords="805,373,96" href="Web/Design/Design.html" target="" alt="blueBall" title="blueBall" />
+				<area shape="circle" coords="1096,142,97" href="Web/Experiment/Experiment.html" target="" alt="blueBall" title="blueBall" />
+				<area shape="circle" coords="1093,367,96" href="Web/Experiment/Experiment.html" target="" alt="blueBall" title="blueBall" />
+				<area shape="circle" coords="1091,618,96" href="Web/Experiment/Experiment.html" target="" alt="blueBall" title="blueBall" />
+				<area shape="circle" coords="459,638,65" href="Web/Experiment/Experiment.html" target="" alt="blueBall" title="blueBall" />
+				<area shape="circle" coords="642,638,64" href="Web/Experiment/Experiment.html" target="" alt="blueBall" title="blueBall" />
+				<area shape="circle" coords="825,637,66" href="Web/Experiment/Experiment.html" target="" alt="blueBall" title="blueBall" />
+			</map>
+		</div>
+		
+		
+	</main>
+
+
+	<footer>
+		<p>&copy;YOKABIO 2019</p>
+	</footer>
+
+</body>
+
+</html>
