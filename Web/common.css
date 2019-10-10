@@ -1351,17 +1351,24 @@ label span{
 	text-align: center;
 	width: 90%;
 }
+.member_top h1{
+	font-size: 35px;
+}
+.member_top p{
+	font-size: 30px;
+}
 .member{
 	display: inline-block;
-	width: 350px;
+	width: 330px;
 	background-color: WHITE;
 	border-radius: 10%;
 	margin: 15px;
 }
 .member table{
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
+	pointer-events: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
 }
 
 .member table tr{
@@ -1384,6 +1391,41 @@ label span{
 .member table p{
 	text-align: center;
 	font-size: 30px;
+	padding-left: 0%;
+	padding-top: 0%;
+}
+.sponsor{
+	display: inline-block;
+	width: 100%;
+	background-color: WHITE;
+	border-radius: 10%;
+}
+
+.sponsor table{
+	pointer-events: none;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+.sponsor table tr{
+  border-bottom: solid 1px transparent;
+  cursor: pointer;
+}
+
+.sponsor table th,table td{
+  text-align: center;
+  width: 30%;
+  padding: 5px 0;
+}
+
+.sponsor table img{
+    width:  90%;
+}
+
+.sponsor table p{
+	text-align: center;
+	font-size: 25px;
 	padding-left: 0%;
 	padding-top: 0%;
 }
