@@ -46,9 +46,9 @@
 			<li><a href="../Home/Home.html">Home <span class="caret"></span></a></li>
 			<li><a href="../Project/Project.html">Project <span class="caret"></span></a></li>
 			<li><a href="../Design/Design.html">Design<span class="caret"></span></a></li>
-			<!--<li><a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a></li>-->
+			<li><a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a></li>
 			<li><a href="../Experiment/Experiment.html">Experiment <span class="caret"></span></a></li>
-			<li><a href="../ELSI/ELSI.html">ELSI<span class="caret"></span></a></li>
+			<li><a href="../Discussion/Discussion.html">Discussion<span class="caret"></span></a></li>
 			<li><a href="../Team/Team.html">Team</a></li>
 		</ul>
 	</nav>
@@ -74,9 +74,7 @@
 				<ul>
 					<li><a href="../Project/Project.html#Background">Background</a></li>
 					<li><a href="../Project/Project.html#TheProblem">The Problem</a></li>
-					<li><a href="../Project/Project.html#OurSolution">Our Solution</a></li>
-					<li><a href="../Project/Project.html#ProjectGoal">Project Goal</a></li>
-					<li><a href="../Project/Project.html#Future">Future</a></li>
+					<li><a href="../Project/Project.html#Idea">Our idea</a></li>
 				</ul>
 				</div>
 			</li>
@@ -84,31 +82,40 @@
 				<a href="../Design/Design.html">Design<span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Design/Design.html#DNAorigami">Mechanism of Origami</a></li>
-					<li><a href="../Design/Design.html#Reactant">Reactant</a></li>
-					<li><a href="../Design/Design.html#Conjugation">Conjugation</a></li>
+					<li><a href="../Design/Design.html#Mechanism">Mechanism</a></li>
+					<li><a href="../Design/Design.html#DNAo">DNA origami</a></li>
+					<li><a href="../Design/Design.html#DSD">DNA strand displacement network</a></li>
 				</ul>
 				</div>
 			</li>
-			<!--<li>
+			<li>
 				<a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Simulation/Simulation.html#Open">Open</a></li>
-					<li><a href="../Simulation/Simulation.html#Close">Close</a></li>
+					<li><a href="../Simulation/Simulation.html#cadnano">cadnano</a></li>
+					<li><a href="../Simulation/Simulation.html#nupack">nupack</a></li>
 				</ul>
 				</div>
-			</li>-->
+			</li>
 			<li>
 				<a href="../Experiment/Experiment.html">Experiment <span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Experiment/Experiment.html#Materials">Materials</a></li>
-					<li><a href="../Experiment/Experiment.html#Method">Method</a></li>
+					<li><a href="../Experiment/Experiment.html#DSDr">DSD</a></li>
+					<li><a href="../Experiment/Experiment.html#DNAo">DNAo</a></li>
+					<li><a href="../Experiment/Experiment.html#san">DSD on DNAo</a></li>
 				</ul>
 				</div>
 			</li>
-			<li><a href="../ELSI/ELSI.html">ELSI</a></li>
+			<li>
+				<a href="../Discussion/Discussion.html">Discussion <span class="caret"></span></a>
+				<div>
+				<ul>
+					<li><a href="../Discussion/Discussion.html#Future">Future</a></li>
+					<li><a href="../Discussion/Discussion.html#ELSI">ELSI</a></li>
+				</ul>
+				</div>
+			</li>							
 			<li><a href="../Team/Team.html">Team</a></li>
 		</ul>
 		</div>
@@ -118,9 +125,10 @@
 	<!--↓ナビゲーションバー(サブ)-->
 	<div id="na">
 		<div id="navitop">
-			<li><a href="../ELSI/ELSI.html"><img src="../img/icon2.png"><a></li>
-			<li><a href="../ELSI/ELSI.html"><h1>ELSI</h1></a></li>
+			<li><a href="#Top"><img src="../img/icon2.png"><a></li>
+			<li><a href="#Top"><h1>Discussion</h1></a></li>
 			<ul id="navi">
+				<li><a href="#Future">Future</a></li>
 				<li><a href="#ELSI">ELSI</a></li>
 			</ul>
 		</div>
@@ -138,14 +146,23 @@
 	<div class="space"></div>
 	<div class="space"></div>
 	<div class="space"></div>
-	<div class="midasi"><h1>ELSI</h1></div>
+	<div class="midasi"  id="Top"><h1>Discussion</h1></div>
+
+						
+	<div class="section1"  id="Future">
+		<h1>Future</h1>
+		<div class="space"></div>
+		<h2>For display</h2>
+		<p>発展的に“画素”とするアイデアを提案したい。一般にカラーディスプレイに使われている画素はR(red),G(green),B(blue)の三原色を用いて表現されている。これに倣うようにDNAorigamiでつくった平面構造に三原色をそれぞれ発する蛍光分子をとりつける。三原色をもとに表現したい色を蛍光させるために、これら蛍光分子が対応する消光分子に向かって計算しながら近づけて反応させることで、様々な色を表現することが可能になると考える。ただ、ここで一枚の平面に三つの蛍光分子をつけることによってフレットが生じる可能性を考慮しなければならない。しかしながら、DNAは4つの塩基を用いており、DNA origamiでつくったプレートには設計図が存在する。ゆえに、フレットが起きない距離を計算して、そこに蛍光分子をそれぞれ付着させるdesignを可能にすることができると考える。</p>
+							
+		<h2>酵素ディスプレイ</h2>
+		<p>体内で(あるいは検査薬として)蛍光するような仕組みを前述のものと合わせて作成する。(特定のウイルス・細菌の存在を示すシグナルの役割を果たすシステムが出来上がる可能性がある。)</p>
+	</div>
 
 	<div class="section1"  id="ELSI">
 		<h1>ELSI</h1>
 		<div class="space"></div>
-		<p>Since this platform is a mechanism that accelerates reactions, at the current research stage, there is a possibility for some harmful substances may be produced during the reactions. If so, there is a possibility that weapons can it will be used as a weapon.　</p>
-		<div class="space"></div>
-		<p>Besides, when the DNA origami is inserted into the body, an abnormal reaction may happen will cause excessive rejection and allergic reactions, resulting in an unexpected burden on the body or some kind of illness.</p>
+		<p>今回のプロジェクトに用いたのはDNAoを含めほとんどの部分がDNAで構成されている。そのため生体との親和性が高く、通常では起こりえない化学反応が起きる可能性を秘めている。今回のプロジェクト及び実験では生体内での利用を想定していないが、もし第三者がこれを悪用しようとした場合、生体内に注入して犯罪の道具として使用できてしまう。また、DNA鎖が生体内に投入されてしまった場合生物内にもともと存在する遺伝子への影響も考えなければならない。</p>
 	</div>
 	</main>
 

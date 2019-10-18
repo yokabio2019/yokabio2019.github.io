@@ -46,9 +46,9 @@
 			<li><a href="../Home/Home.html">Home <span class="caret"></span></a></li>
 			<li><a href="../Project/Project.html">Project <span class="caret"></span></a></li>
 			<li><a href="../Design/Design.html">Design<span class="caret"></span></a></li>
-			<!--<li><a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a></li>-->
+			<li><a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a></li>
 			<li><a href="../Experiment/Experiment.html">Experiment <span class="caret"></span></a></li>
-			<li><a href="../ELSI/ELSI.html">ELSI<span class="caret"></span></a></li>
+			<li><a href="../Discussion/Discussion.html">Discussion<span class="caret"></span></a></li>
 			<li><a href="../Team/Team.html">Team</a></li>
 		</ul>
 	</nav>
@@ -74,9 +74,7 @@
 				<ul>
 					<li><a href="../Project/Project.html#Background">Background</a></li>
 					<li><a href="../Project/Project.html#TheProblem">The Problem</a></li>
-					<li><a href="../Project/Project.html#OurSolution">Our Solution</a></li>
-					<li><a href="../Project/Project.html#ProjectGoal">Project Goal</a></li>
-					<li><a href="../Project/Project.html#Future">Future</a></li>
+					<li><a href="../Project/Project.html#Idea">Our idea</a></li>
 				</ul>
 				</div>
 			</li>
@@ -84,31 +82,40 @@
 				<a href="../Design/Design.html">Design<span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Design/Design.html#DNAorigami">Mechanism of Origami</a></li>
-					<li><a href="../Design/Design.html#Reactant">Reactant</a></li>
-					<li><a href="../Design/Design.html#Conjugation">Conjugation</a></li>
+					<li><a href="../Design/Design.html#Mechanism">Mechanism</a></li>
+					<li><a href="../Design/Design.html#DNAo">DNA origami</a></li>
+					<li><a href="../Design/Design.html#DSD">DNA strand displacement network</a></li>
 				</ul>
 				</div>
 			</li>
-			<!--<li>
+			<li>
 				<a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Simulation/Simulation.html#Open">Open</a></li>
-					<li><a href="../Simulation/Simulation.html#Close">Close</a></li>
+					<li><a href="../Simulation/Simulation.html#cadnano">cadnano</a></li>
+					<li><a href="../Simulation/Simulation.html#nupack">nupack</a></li>
 				</ul>
 				</div>
-			</li>-->
+			</li>
 			<li>
 				<a href="../Experiment/Experiment.html">Experiment <span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Experiment/Experiment.html#Materials">Materials</a></li>
-					<li><a href="../Experiment/Experiment.html#Method">Method</a></li>
+					<li><a href="../Experiment/Experiment.html#DSDr">DSD</a></li>
+					<li><a href="../Experiment/Experiment.html#DNAo">DNAo</a></li>
+					<li><a href="../Experiment/Experiment.html#san">DSD on DNAo</a></li>
 				</ul>
 				</div>
 			</li>
-			<li><a href="../ELSI/ELSI.html">ELSI</a></li>
+			<li>
+				<a href="../Discussion/Discussion.html">Discussion <span class="caret"></span></a>
+				<div>
+				<ul>
+					<li><a href="../Discussion/Discussion.html#Future">Future</a></li>
+					<li><a href="../Discussion/Discussion.html#ELSI">ELSI</a></li>
+				</ul>
+				</div>
+			</li>							
 			<li><a href="../Team/Team.html">Team</a></li>
 		</ul>
 		</div>
@@ -118,12 +125,12 @@
 	<!--↓ナビゲーションバー(サブ)-->
 	<div id="na">
 		<div id="navitop">
-			<li><a href="../Design/Design.html"><img src="../img/icon2.png"><a></li>
-			<li><a href="../Design/Design.html"><h1>Design</h1></a></li>
+			<li><a href="#Top"><img src="../img/icon2.png"><a></li>
+			<li><a href="#Top"><h1>Design</h1></a></li>
 			<ul id="navi">
-				<li><a href="#DNAorigami">Mechanism of Origami</a></li>
-				<li><a href="#Reactant">Reactant</a></li>
-				<li><a href="#Conjugation">Conjugation</a></li>
+				<li><a href="#Mechanism">Mechanism</a></li>
+				<li><a href="#DNAo">DNA origami</a></li>
+				<li><a href="#DSD">DNA strand displacement</a></li>
 				<li><a href="#References">References</a></li>
 			</ul>
 		</div>
@@ -142,29 +149,70 @@
 	<div class="space"></div>
 	<div class="space"></div>
 	<div class="space"></div>
-	<div class="midasi"><h1>Design</h1></div>
+	<div class="midasi"  id="Top"><h1>Design</h1></div>
 		
-	<div class="section1"  id="DNAorigami">
-		<h1>Mechanism of Origami</h1>
+	<div class="section1"  id="Mechanism">
+		<h1>Mechanism</h1>
 		<div class="space"></div>
-		<h2>Construction of DNA origami</h2>
-		<h2>Opening and closing method</h2>
+		<p>私たちはDNA折り紙上で蛍光の鎖置換反応を用いたON/OFFを行うための設計を行った。DNA折り紙は単純な2次元構造を考えるため、DNA折り紙で作られた四角形のplateを作成する。DNA折り紙プレート上には蛍光分子の付着した一本鎖DNAAが固定されており、この状態では蛍光分子はON状態となり、蛍光物質は発光する（図1a）。このあと、消光分子のついたssDNABを投入することで,DNA Bが折り紙上のDNAAとハイブリダイゼーションしてdsDNAA-Bを形成する。この時、蛍光分子と消光分子が接近することで蛍光は消え、OFF状態となる（図1b）。最後にまたDNAReleaserによってdsDNAA-Bから消光分子のついたDNAがひきはがされ、最初の状態に戻る(図1a)</p>
+							
+		<div class="figure">
+			<img src="../img/DFigure1.png">
+			<p>figure1: メカニズム</p>
+		</div>
 	</div>
 	
 	
 	<div class="space" id="subA"></div>
 
-	<div class="section1"  id="Reactant">
-		<h1>Reactant</h1>
+	<div class="section1"  id="DNAo">
+		<h1>DNA origami</h1>
 		<div class="space"></div>
-		<h2>Reasons for choosing these reactants</h2>
-		<h2>Reaction</h2>
+		<p>DNAoに機能を付与するために次の設計を必要とする</p>
+		<p>・DNA折り紙上にssDNAを配置する設計</p>
+		<p>この配置について説明するためにDNA折り紙について、大きさ、形、ssDNA配置の制御間隔について言及する。</p>
+		<div class="space"></div>
+		<p>DNA折り紙については多くの論文で使用されている信用性の高いものを使用した。ScaffoldにはM13(7249塩基)を用いて、Stapleには一部除き32塩基のDNAを用いた。Stapleの全体の配列はsupplementinformationに示す。</p>
+		<div class="btnblock">
+			<a href="../SI/SI.html">
+				<button type="submit" class="btn">Supplement information</button>
+			</a>
+		</div>
+							
+		<div class="figure">
+			<img src="../img/DFigure2.png">
+			<p>figure2: DNA折り紙plate（画像は仮）</p>
+		</div>
+							
+		<p>のDNAoの大きさは横約85nm縦約50nmの長方形となっている。scaffoldを織り込むためのstapleは横10nm、縦10nmの間隔で配置され、このstapleの配列を延長することでDNAプレート上にDNAを配置できる。そのため、ssDNA配置の制御間隔は10nmとなっている。今回は102,103,114,115の４つのstapleを延長した。１つではなく４つのstapleを延長した理由は１つでは蛍光と消光の差を明確に得られないのではないかと考えたからである。また、蛍光の数に対して折り紙の一部分しか使用していない理由は、我々の考える
+応用（画素子など）と条件を同じとするために今回は比較的大きなDNA折り紙を用いた。延長後の配列を図3に示す</p>
+							
+		<div class="array">
+			<p>name&emsp;Sequence</p>
+			<p>102&emsp;	AGACAGTCATTCAAAAGGGTGAGAAGCTATAT <font color="green">TTT</font> <font color="red">GGAGTGATGTGATGGGATGGTGATG</font></p>
+			<p>103&emsp;	TTTCATTTGGTCAATAACCTGTTTATATCGCG <font color="green">TTT</font> <font color="red">GGAGTGATGTGATGGGATGGTGATG</font></p>
+			<p>114&emsp;	ATCGGCTGCGAGCATGTAGAAACCTATCATAT <font color="green">TTT</font> <font color="red">GGAGTGATGTGATGGGATGGTGATG</font></p>
+			<p>115&emsp;	CCTAATTTACGCTAACGAGCGTCTAATCAATA <font color="green">TTT</font> <font color="red">GGAGTGATGTGATGGGATGGTGATG</font></p>
+		</div>
+		<p>figure3: 延長したDNAの配列：色のついた塩基が延長箇所、赤色の塩基がハイブリダイゼーションドメイン。緑色の塩基は折り紙と延長塩基間の間に余裕を持たせている。</p>
 	</div>
 		
-	<div class="section1"  id="Conjugation">
-		<h1>Conjugation for DNA origami and reactant</h1>
+	<div class="section1"  id="DSD">
+		<h1>DNA strand displacement</h1>
 		<div class="space"></div>
-
+		<p>鎖置換反応を用いてDNAoに機能を付与していくが、今回付与したい機能は以下のとおりである。</p>
+		<ol>
+			<li>消光分子と蛍光分子を結合させる機能</li>
+			<li>結合した後消光分子と蛍光分子を解離させ、再び蛍光分子が消光分子と結合できる状態に戻る機能</li>
+		</ol>
+		<p>これらの機能を付与するシステムを実現する反応経路図を図２に示す。初めに蛍光分子を修飾したA(AはDNAo内に存在する)と消光分子を修飾したBが結合する。それと同時にInputとGate1のDNA鎖が結合する。その鎖置換反応に伴い、もともとGate1に結合していたReleaserが遊離する。遊離したReleaserがBと結合することにより、再びBは一本鎖に戻る。この一連の流れをたどることによって今回付与したい機能を実現していく。</p>
+							
+		<div class="figure">
+			<img src="../img/DFigure3.png">
+			<p>figure4: 今回のプロジェクトにおけるスキーム図</p>
+		</div>
+							
+		<p>しかし、スキーム図を基に考えるとReleaser鎖とTemplate鎖は独立しており、このままではGateを生成することは不可能である。かといって完全相補な鎖を生成してしまうと今度はReleaser鎖がはがれず反応が正常に行われない。そこで、ミスマッチ塩基対を導入していく。Gate二重鎖は完全に結合するわけではなく、ある程度の結合を行いかつ以降の反応も正常に行われていく。</p>
 	</div>
 
 		
@@ -173,9 +221,7 @@
 		<div class="space"></div>
 
 		<ol>
-			<li>Turek, V. A.,Chikkaraddy, R.,Cormier, S.,Stockham, B.,Ding, T.,Keyser, U. F.,Baumberg, J. J.,Adv. Funct. Mater. 2018,28, 1706410.https://doi.org/10.1002/adfm.201706410</li>
-			<li>James Cookson Platinum Metals Rev., 2012, 56, (2), 83-98, http://dx.doi.org/10.1595.147106712X632415</li>
-			<li>Yan, Xiaowen and Zhang, Hongquan and Wang, Zhixin and Peng, Hanyong and Tao, Jeffrey and Li, Xing-Fang and Chris Le, X. Chem. Commun., 2018,54,7491-7494.   http://dx.doi.org/10.1039/C8CC03268H</li>
+			<li>Jinglin Fu, Minghui Liu, Yan Liu, Neal W. Woodbury, and Hao Yan, "Interenzyme Substrate Diffusion for an Enzyme Cascade Organizedon Spatially Addressable DNA Nanostructures", JACS, 2012, https://pubs.acs.org/doi/abs/10.1021/ja300897h</li>
 		</ol>
 
 	</div>

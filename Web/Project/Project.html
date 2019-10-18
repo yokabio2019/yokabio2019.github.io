@@ -46,9 +46,9 @@
 			<li><a href="../Home/Home.html">Home <span class="caret"></span></a></li>
 			<li><a href="../Project/Project.html">Project <span class="caret"></span></a></li>
 			<li><a href="../Design/Design.html">Design<span class="caret"></span></a></li>
-			<!--<li><a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a></li>-->
+			<li><a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a></li>
 			<li><a href="../Experiment/Experiment.html">Experiment <span class="caret"></span></a></li>
-			<li><a href="../ELSI/ELSI.html">ELSI<span class="caret"></span></a></li>
+			<li><a href="../Discussion/Discussion.html">Discussion<span class="caret"></span></a></li>
 			<li><a href="../Team/Team.html">Team</a></li>
 		</ul>
 	</nav>
@@ -74,9 +74,7 @@
 				<ul>
 					<li><a href="../Project/Project.html#Background">Background</a></li>
 					<li><a href="../Project/Project.html#TheProblem">The Problem</a></li>
-					<li><a href="../Project/Project.html#OurSolution">Our Solution</a></li>
-					<li><a href="../Project/Project.html#ProjectGoal">Project Goal</a></li>
-					<li><a href="../Project/Project.html#Future">Future</a></li>
+					<li><a href="../Project/Project.html#Idea">Our idea</a></li>
 				</ul>
 				</div>
 			</li>
@@ -84,31 +82,40 @@
 				<a href="../Design/Design.html">Design<span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Design/Design.html#DNAorigami">Mechanism of Origami</a></li>
-					<li><a href="../Design/Design.html#Reactant">Reactant</a></li>
-					<li><a href="../Design/Design.html#Conjugation">Conjugation</a></li>
+					<li><a href="../Design/Design.html#Mechanism">Mechanism</a></li>
+					<li><a href="../Design/Design.html#DNAo">DNA origami</a></li>
+					<li><a href="../Design/Design.html#DSD">DNA strand displacement network</a></li>
 				</ul>
 				</div>
 			</li>
-			<!--<li>
+			<li>
 				<a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Simulation/Simulation.html#Open">Open</a></li>
-					<li><a href="../Simulation/Simulation.html#Close">Close</a></li>
+					<li><a href="../Simulation/Simulation.html#cadnano">cadnano</a></li>
+					<li><a href="../Simulation/Simulation.html#nupack">nupack</a></li>
 				</ul>
 				</div>
-			</li>-->
+			</li>
 			<li>
 				<a href="../Experiment/Experiment.html">Experiment <span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Experiment/Experiment.html#Materials">Materials</a></li>
-					<li><a href="../Experiment/Experiment.html#Method">Method</a></li>
+					<li><a href="../Experiment/Experiment.html#DSDr">DSD</a></li>
+					<li><a href="../Experiment/Experiment.html#DNAo">DNAo</a></li>
+					<li><a href="../Experiment/Experiment.html#san">DSD on DNAo</a></li>
 				</ul>
 				</div>
 			</li>
-			<li><a href="../ELSI/ELSI.html">ELSI</a></li>
+			<li>
+				<a href="../Discussion/Discussion.html">Discussion <span class="caret"></span></a>
+				<div>
+				<ul>
+					<li><a href="../Discussion/Discussion.html#Future">Future</a></li>
+					<li><a href="../Discussion/Discussion.html#ELSI">ELSI</a></li>
+				</ul>
+				</div>
+			</li>							
 			<li><a href="../Team/Team.html">Team</a></li>
 		</ul>
 		</div>
@@ -118,14 +125,12 @@
 	<!--↓ナビゲーションバー(サブ)-->
 	<div id="na">
 		<div id="navitop">
-			<li><a href="../Project/Project.html"><img src="../img/icon2.png"><a></li>
-			<li><a href="../Project/Project.html"><h1>Project</h1></a></li>
+			<li><a href="#Top"><img src="../img/icon2.png"><a></li>
+			<li><a href="#Top"><h1>Project</h1></a></li>
 			<ul id="navi">
 				<li><a href="#Background">Background</a></li>
 				<li><a href="#TheProblem">The Problem</a></li>
-				<li><a href="#OurSolution">Our Solution</a></li>
-				<li><a href="#ProjectGoal">Project Goal</a></li>
-				<li><a href="#Future">Future</a></li>
+				<li><a href="#Idea">Our idea</a></li>
 				<li><a href="#References">References</a></li>
 			</ul>
 		</div>
@@ -143,21 +148,23 @@
 	<div class="space"></div>
 	<div class="space"></div>
 	<div class="space"></div>
-	<div class="midasi"><h1>Project</h1></div>
+	<div class="midasi"  id="Top"><h1>Project</h1></div>
 
 	<div class="section1"  id="Background">
 		<h1>Background</h1>
 		<div class="space"></div>
-		<h2>What‘s enzyme?</h2>
-
-		<h2>1.Substrate specificity</h2>
-
-		<div class="space"></div>
-
-		<h2>3. Denaturation</h2>
-
-		<h2>4. Allosteric effect</h2>
-
+		<h2>DNA origami</h2>
+		<p>DNA  origamiは、ナノスケールで非任意の2次元及び3次元状の機構を作成するDNAの折りたたみ構造である。相補的な塩基対間の相互作用の特異性をもって、DNAをその塩基配列の設計を通じて有用な建設材料にする。そのプロセスの過程で用いるのは、構成形成の足場となるscaffold鎖と呼ばれる長鎖の一本鎖DNAとstaple鎖と呼ばれる多数の短鎖の一本鎖DNAである。Staple鎖は通常32塩基の長さをもち、ホッチキスの針のように狙い通りの平面構造に固定する役割を果たす。これを様々な場所で行い、その結果、あらかじめ設計していた2次元または3次元形状をもたらす。DNAに蛍光材料(蛍光分子等)を結合させることで、設計したDNA origamiは、電子顕微鏡、原子力顕微鏡などを用いて直接観察が可能である。</p>
+							
+		<h2>鎖置換反応</h2>
+		<p>DNA Strandはより相補的で安定的なStrandと結合する。この性質を生かし、２本鎖DNAを構成している中の１本鎖が他の１本鎖と交換するような反応が起きる。この反応を鎖置換反応と呼ばれている。この反応を用いることで演算や論理ゲートを構築することができ、ナノスケールで様々な機能を付与することができる。しかし、この鎖反応置換を利用しようとすると望まぬ形の反応が起きてしまい、使い辛さがある欠点も持ち合わせている。この欠点はミスマッチ塩基対を採用することで解消され、正しい反応をさせることができる。</p>
+		<div class="figure">
+			<img src="../img/PFigure1.png">
+			<p>figure1: 鎖置換反応の様子</p>
+		</div>
+							
+		<h2>ミスマッチ塩基対</h2>
+		<p>通常DNAはシトシン(C)とグアニン(G)、アデニン(A)とチミン(T)で相補になっており、これらが結合することで二重鎖の形態をとる。逆に言えば、CとAなどは結合しにくいことになる。この結合しにくい組み合わせをミスマッチ塩基対という。ミスマッチ塩基対を導入することで予期せぬ反応が発生する可能性が大きく下がり予定通りの反応を得やすい。しかし、二重鎖に結合しにくい部分が現れることになるため本来よりも結合時の力は弱まり強度面では不安が残る仕様になる。</p>
 	</div>
 	
 	
@@ -166,57 +173,20 @@
 	<div class="section1"  id="TheProblem">
 		<h1>The Problem</h1>
 		<div class="space"></div>
+		<p>DNAorigamiによって表現されてきた2次元機構は、これまでdesign・表現の一つとして利用されてきた。例えば、スマイリーフェイスや地図といった類である。しかしながら、DNAorigami自体に機能をもっているものの多くは3次元で構成されているものである。例えば、中空の3次元構造をつくることでBoxの役割を果たすものや、平面構造をひだ状に重ねた構造をつくることで鳥かご状の構造をつくり、近年では、リボソームに穴を開けるイオンチャンネルの機能を持つ構造体などもつくられている。その一方で、2次元で構成されたDNA  origamiに生化学的で有用な機能をもっているものは少ない。そこで、2次元のDNAorigamiを用いてよりindustrialな使い方はできないのか、と提案したい。</p>
 
 	</div>
 
-	<div class="section1"  id="OurSolution">
-		<h1>Our Solution</h1>
+	<div class="section1"  id="Idea">
+		<h1>Our idea</h1>
 		<div class="space"></div>
-		<h2>1.Idea</h2>
-		<div class=figure>
-			<img src="../img/Dfigure3.png">
-				<p><b>Figure2:structure of DNA origami</b></p>
-		</div>
-		<div class="space"></div>
-			
-		<h2>2.What’s DNA origami?</h2>
-
-			
-		<h2>3.What’re reactants?</h2>
-
-			
-		<div class="space"></div>
-			
-			
-		<div class="space"></div>
-			
-			
-		<div class="space"></div>
-			
-		<div class=figure>
-			<img src="../img/Pfigure3.png">
-				<p><b>Figure3:Heme reaction</b></p>
-		</div>
-			
-		<div class="space"></div>
-			
-		<h2>4.Merit of this design</h2>
+		<h2>Idea</h2>
+		<p>“DNAorigami上で鎖置換反応を行う”</p>
+		<p>2次元機構のDNA  origamiに機能を持たせるべく、今回は別の反応機構と組み合わせることを考えた。我々のアイデアとしてDNA origami をベースとして２つの物質、蛍光物質と消光物質が反応するような仕組みを構築する。具体的にいうと、消光物質はDNA origami に固定するように設計する。DNA origami は平面構造であるが、その構造から一本鎖が浮遊するようにする。そして、その一本鎖に相補的なDNA鎖と結合した蛍光物質を用意する。両者が結合し二本鎖が完成した(鎖置換反応)後、二つの物質が反応するような仕組みを設計する。消光物質と蛍光物質を用いてこのideaを基にしたExperimentを、段階を踏んで行った。まずは蛍光物質と消光物質を用いた鎖置換反応を行う実験と、浮遊した一本鎖を有したDNA  origamiを作成する実験を別々に行う。そして、これらを組み合わせることによって我々の設計通りになるかどうかを確かめた。</p>
+		<h2>Merit</h2>
+		<p>紐状の場合、反応距離が一定にならない可能性があり安定性に欠けるが、ベースが存在することで安定性が生まれ反応距離についても計算できる。また、ベースをorigamiにしたのには、樹脂(化学物質を用い合成)の場合は構造式に違いがなく距離が計算できないため設計が困難である。一方、DNAは四つの塩基を基にした配列が存在し、それを基にして距離をはかることが可能であるため利点となる。加えて、DNA  origamiをガラスやシリコンといった原料を用いた板のような基盤となるものの上に作成することができれば、反応後、不要となった一本鎖を洗い流すことができる。これによって、鎖置換反応のリサイクルを可能にすることができる。</p>
 	</div>
-
 		
-	<div class="section1"  id="ProjectGoal">
-		<h1>Project Goal</h1>
-		<div class="space"></div>
-			
-		<div class="space"></div>
-		<h2>1.Criteria for success</h2>
-			
-			
-		<h2>2.Design</h2>
-		<div class="space"></div>
-			
-		<h2>3.Experiment</h2>
-	</div>
 		
 		
 	<div class="section1"  id="References">

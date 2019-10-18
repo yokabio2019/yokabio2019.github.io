@@ -46,9 +46,9 @@
 			<li><a href="../Home/Home.html">Home <span class="caret"></span></a></li>
 			<li><a href="../Project/Project.html">Project <span class="caret"></span></a></li>
 			<li><a href="../Design/Design.html">Design<span class="caret"></span></a></li>
-			<!--<li><a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a></li>-->
+			<li><a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a></li>
 			<li><a href="../Experiment/Experiment.html">Experiment <span class="caret"></span></a></li>
-			<li><a href="../ELSI/ELSI.html">ELSI<span class="caret"></span></a></li>
+			<li><a href="../Discussion/Discussion.html">Discussion<span class="caret"></span></a></li>
 			<li><a href="../Team/Team.html">Team</a></li>
 		</ul>
 	</nav>
@@ -74,9 +74,7 @@
 				<ul>
 					<li><a href="../Project/Project.html#Background">Background</a></li>
 					<li><a href="../Project/Project.html#TheProblem">The Problem</a></li>
-					<li><a href="../Project/Project.html#OurSolution">Our Solution</a></li>
-					<li><a href="../Project/Project.html#ProjectGoal">Project Goal</a></li>
-					<li><a href="../Project/Project.html#Future">Future</a></li>
+					<li><a href="../Project/Project.html#Idea">Our idea</a></li>
 				</ul>
 				</div>
 			</li>
@@ -84,31 +82,40 @@
 				<a href="../Design/Design.html">Design<span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Design/Design.html#DNAorigami">Mechanism of Origami</a></li>
-					<li><a href="../Design/Design.html#Reactant">Reactant</a></li>
-					<li><a href="../Design/Design.html#Conjugation">Conjugation</a></li>
+					<li><a href="../Design/Design.html#Mechanism">Mechanism</a></li>
+					<li><a href="../Design/Design.html#DNAo">DNA origami</a></li>
+					<li><a href="../Design/Design.html#DSD">DNA strand displacement network</a></li>
 				</ul>
 				</div>
 			</li>
-			<!--<li>
+			<li>
 				<a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Simulation/Simulation.html#Open">Open</a></li>
-					<li><a href="../Simulation/Simulation.html#Close">Close</a></li>
+					<li><a href="../Simulation/Simulation.html#cadnano">cadnano</a></li>
+					<li><a href="../Simulation/Simulation.html#nupack">nupack</a></li>
 				</ul>
 				</div>
-			</li>-->
+			</li>
 			<li>
 				<a href="../Experiment/Experiment.html">Experiment <span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Experiment/Experiment.html#Materials">Materials</a></li>
-					<li><a href="../Experiment/Experiment.html#Method">Method</a></li>
+					<li><a href="../Experiment/Experiment.html#DSDr">DSD</a></li>
+					<li><a href="../Experiment/Experiment.html#DNAo">DNAo</a></li>
+					<li><a href="../Experiment/Experiment.html#san">DSD on DNAo</a></li>
 				</ul>
 				</div>
 			</li>
-			<li><a href="../ELSI/ELSI.html">ELSI</a></li>
+			<li>
+				<a href="../Discussion/Discussion.html">Discussion <span class="caret"></span></a>
+				<div>
+				<ul>
+					<li><a href="../Discussion/Discussion.html#Future">Future</a></li>
+					<li><a href="../Discussion/Discussion.html#ELSI">ELSI</a></li>
+				</ul>
+				</div>
+			</li>							
 			<li><a href="../Team/Team.html">Team</a></li>
 		</ul>
 		</div>
@@ -118,8 +125,8 @@
 	<!--↓ナビゲーションバー(サブ)-->
 	<div id="na">
 		<div id="navitop">
-			<li><a href="../Experiment/Experiment.html"><img src="../img/icon2.png"><a></li>
-			<li><a href="../Experiment/Experiment.html"><h1>Experiment</h1></a></li>
+			<li><a href="#Top"><img src="../img/icon2.png"><a></li>
+			<li><a href="#Top"><h1>Experiment</h1></a></li>
 			<ul id="navi">
 				<li><a href="#Materials">Materials</a></li>
 				<li><a href="#Method">Method</a></li>
@@ -140,22 +147,98 @@
 	<div class="space"></div>
 	<div class="space"></div>
 	<div class="space"></div>
-	<div class="midasi"><h1>Experiment</h1></div>
+	<div class="midasi"  id="Top"><h1>Experiment</h1></div>
 		
 	
 		<!--<div class="space" id="subA"></div>-->
-
-	<div class="section1"  id="Materials">
-		<h1>Materials</h1>
+	<div class="section1"  id="DNAo">
+		<h1>DNA origami</h1>
 		<div class="space"></div>
+		<h2>Purpose</h2>
+		<h2>Method</h2>
+		<h2>Result</h2>
+	</div>
+						
+	<div class="section1"  id="DSDr">
+		<h1>DNA strand displacement reactant</h1>
+		<div class="space"></div>
+		<h2>Material&Methods</h2>
+		<p>DNAの設計と、二次構造の評価ができるNUPACKを用いて、上のスキーム図にあるDNAを設計しました。</p>
+		<div class="figure">
+			<p>Table1: 使用したDNAの塩基配列</p>
+			<img src="../img/ETable1.png">
+		</div>
+							
+		<h2>Result</h2>	
+		<p>１.実験濃度について</p>
+		<p>上のDNAをそれぞれ以下の濃度になるまで1.25%MgClを添加したTris-EDTAバッファを用いて２０°Cで希釈して使用しました</p>
+		<div class="figure">
+			<p>Table2: 実験１のDNAの濃度</p>
+			<img src="../img/ETable2.png">
+		</div>
+		<div class="figure">
+			<p>Table3: 実験２のDNA濃度</p>
+			<img src="../img/ETable3.png">
+		</div>
+		<div class="figure">
+			<p>Table4: 実験２のDNA濃度</p>
+			<img src="../img/ETable4.png">
+		</div>
+		<p>2.アニーリング</p>
+		<p>サーマルサイクラー(ASTEC325:GeneAtlas)を用いて、Gateを９５°Cに加熱し、９５〜２０°C(-1°C/min)でアニーリングしました。</p>
+		<img src="../img/EFigure1.jpg"  width="40%">
+		<div class="figure">
+			<p>Figure1: サーマルサイクラー</p>
+		</div>
+		<p>3.蛍光強度測定</p>
+		<p>蛍光分光光度計(JASCO:FP-8300)を用いて、蛍光強度を１分間隔で測定しました。</p>
+		<img src="../img/EFigure2.jpg" width="40%">
+		<div class="figure">
+			<p>Figure2: 蛍光分光光度計</p>
+		</div>
+		<p>反応の確認に関しては、FRETを利用して確認しました。Aの５’末端にFAM、Bの３’末端にBHQ１を修飾し、OFF状態の場合、AとBが２本鎖になり、蛍光が吸収されます。ON状態の時は、Aは一本鎖の状態のため、蛍光を発します。</p>
+							
+		<p>・機器</p>
+		<p>以下に示す企業から機器を購入しました。</p>
+		<div class="figure">
+			<p>Table5: 機器</p>
+			<img src="../img/ETable5.png">
+		</div>
+							
+		<p>Operation Experiment</p>
+		<p>実験１</p>
+		<p>まず、消光させるBとReleaserの２本を別々にインプットし、ON、OFFの反応が機能するかを検証した。</p>
+		<p>消光分子Bを投入した３０分後にReleaserを投入し、経過を観察した/p>
+		<div class="figure">
+			<img src="../img/EFigure3.png">
+			<p>Figure3: Inputを手動で投入した実験グラフ</p>
+		</div>
+		<p>以上の結果から、蛍光・消光の反応が起こっていることが確認できた。</p>
+								
+		<p>実験２</p>
+		<p>2.1</p>
+		<p>１本鎖を用いたON,OFF回路の実験/p>
+		<div class="figure">
+			<img src="../img/EFigure4.png">
+			<p>Figure4: 2.1の実験を３回行った平均のグラフ</p>
+		</div>
+		<p>１、２の実験を比較すると、ON,FFの反応はうまくいっていると考えられる。しかし、最終的な蛍光強度は実験前の値より低い結果となった。これは、実験の際のGateとInputの濃度により左右されると考えられた。次のグラフは、GateとInputの濃度を大きくして実験した際の結果である。</p>
+									
+		<p>2.2</p>
+		<div class="figure">
+			<img src="../img/EFigure5.png">
+			<p>Figure5: 実験2.1の結果グラフ</p>
+		</div>
+		<p>以上の結果から、2.1の結果に比べて収束値は高くなっているが、完全に元に戻すことはできなかった。また、Releaserの濃度が高くなっているため、収束までの時間が短くなった。また、収束後徐々に蛍光強度が下がっているが、これは時間経過に伴う蛍光分子の劣化だと考えられる。</p>
 	</div>
 		
-	<div class="section1"  id="Method">
-		<h1>Method</h1>
+	<div class="section1"  id="san">
+		<h1>DSD on the DNA origami</h1>
 		<div class="space"></div>
-		<h2>Origami Folding</h2>
+		<h2>Purpose</h2>
+		<h2>Method</h2>
+		<h2>Result</h2>
 	</div>
-		
 		
 	<div class="section1"  id="References">
 		<h1>References</h1>

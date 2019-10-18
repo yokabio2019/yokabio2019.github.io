@@ -46,9 +46,9 @@
 			<li><a href="../Home/Home.html">Home <span class="caret"></span></a></li>
 			<li><a href="../Project/Project.html">Project <span class="caret"></span></a></li>
 			<li><a href="../Design/Design.html">Design<span class="caret"></span></a></li>
-			<!--<li><a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a></li>-->
+			<li><a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a></li>
 			<li><a href="../Experiment/Experiment.html">Experiment <span class="caret"></span></a></li>
-			<li><a href="../ELSI/ELSI.html">ELSI<span class="caret"></span></a></li>
+			<li><a href="../Discussion/Discussion.html">Discussion<span class="caret"></span></a></li>
 			<li><a href="../Team/Team.html">Team</a></li>
 		</ul>
 	</nav>
@@ -74,9 +74,7 @@
 				<ul>
 					<li><a href="../Project/Project.html#Background">Background</a></li>
 					<li><a href="../Project/Project.html#TheProblem">The Problem</a></li>
-					<li><a href="../Project/Project.html#OurSolution">Our Solution</a></li>
-					<li><a href="../Project/Project.html#ProjectGoal">Project Goal</a></li>
-					<li><a href="../Project/Project.html#Future">Future</a></li>
+					<li><a href="../Project/Project.html#Idea">Our idea</a></li>
 				</ul>
 				</div>
 			</li>
@@ -84,31 +82,40 @@
 				<a href="../Design/Design.html">Design<span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Design/Design.html#DNAorigami">Mechanism of Origami</a></li>
-					<li><a href="../Design/Design.html#Reactant">Reactant</a></li>
-					<li><a href="../Design/Design.html#Conjugation">Conjugation</a></li>
+					<li><a href="../Design/Design.html#Mechanism">Mechanism</a></li>
+					<li><a href="../Design/Design.html#DNAo">DNA origami</a></li>
+					<li><a href="../Design/Design.html#DSD">DNA strand displacement network</a></li>
 				</ul>
 				</div>
 			</li>
-			<!--<li>
+			<li>
 				<a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Simulation/Simulation.html#Open">Open</a></li>
-					<li><a href="../Simulation/Simulation.html#Close">Close</a></li>
+					<li><a href="../Simulation/Simulation.html#cadnano">cadnano</a></li>
+					<li><a href="../Simulation/Simulation.html#nupack">nupack</a></li>
 				</ul>
 				</div>
-			</li>-->
+			</li>
 			<li>
 				<a href="../Experiment/Experiment.html">Experiment <span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Experiment/Experiment.html#Materials">Materials</a></li>
-					<li><a href="../Experiment/Experiment.html#Method">Method</a></li>
+					<li><a href="../Experiment/Experiment.html#DSDr">DSD</a></li>
+					<li><a href="../Experiment/Experiment.html#DNAo">DNAo</a></li>
+					<li><a href="../Experiment/Experiment.html#san">DSD on DNAo</a></li>
 				</ul>
 				</div>
 			</li>
-			<li><a href="../ELSI/ELSI.html">ELSI</a></li>
+			<li>
+				<a href="../Discussion/Discussion.html">Discussion <span class="caret"></span></a>
+				<div>
+				<ul>
+					<li><a href="../Discussion/Discussion.html#Future">Future</a></li>
+					<li><a href="../Discussion/Discussion.html#ELSI">ELSI</a></li>
+				</ul>
+				</div>
+			</li>							
 			<li><a href="../Team/Team.html">Team</a></li>
 		</ul>
 		</div>
@@ -118,11 +125,11 @@
 	<!--↓ナビゲーションバー(サブ)-->
 	<div id="na">
 		<div id="navitop">
-			<li><a href="../Experiment/Experiment.html"><img src="../img/icon2.png"><a></li>
-			<li><a href="../Experiment/Experiment.html"><h1>Experiment</h1></a></li>
+			<li><a href="#Top"><img src="../img/icon2.png"><a></li>
+			<li><a href="#Top"><h1>Simulation</h1></a></li>
 			<ul id="navi">
-				<li><a href="#Materials">Materials</a></li>
-				<li><a href="#Method">Method</a></li>
+				<li><a href="#cadnano">DNA origami</a></li>
+				<li><a href="#nupack">DSD mismatch</a></li>
 				<li><a href="#References">References</a></li>
 			</ul>
 		</div>
@@ -140,21 +147,63 @@
 	<div class="space"></div>
 	<div class="space"></div>
 	<div class="space"></div>
-	<div class="midasi"><h1>Experiment</h1></div>
-		
+	<div class="midasi"  id="Top"><h1>Simulation</h1></div>
 	
-		<!--<div class="space" id="subA"></div>-->
 
-	<div class="section1"  id="Materials">
-		<h1>Materials</h1>
+	<div class="section1"  id="cadnano">
+		<h1>Cadnano</h1>
 		<div class="space"></div>
 	</div>
 		
-	<div class="section1"  id="Method">
-		<h1>Method</h1>
+	<div class="section1"  id="nupack">
+		<h1>Nupack</h1>
 		<div class="space"></div>
-		<h2>PNIPAM conjugation</h2>
-		<h2>Origami Folding</h2>
+		<p>本プロジェクトでは、初めにA(及びAと結合するDNAo)とGateを生成した初期状態にBおよびInputを注入することで反応が開始することを想定している。したがって、図２の反応を確実に起こしてもらうためには以下のすべてを満たす必要がある。</p>
+		<ol>
+			<li>初期状態でGate部分がしっかりと結合している</li>
+			<li>InputがGate以外と結合しない</li>
+		</ol>
+		<p>以上の二つを満たすように各塩基配列を下のようにした。その後、各条件について調べていく</p>
+							
+		<p>A：GAGTGATGTGATGGGATGGTGATG</p>
+		<p>B：CATCACCATCCCATCACATCACTCCTCAAC</p>
+		<p>Input：GAGTAGTTAAGAAGTAATATGATAGAATAGTAATG</p>
+		<p>Releaser(Gate上鎖)：GTTGAGGAGTGATGTGATGGGATGGTGATG</p>
+		<p>Template(Gate下鎖)：CATTACTATTCTATCATATTACTTCTTAACTACTC</p>
+							
+		<p>1.に関して</p>
+		<p>Designでも述べたが、ReleaserとTemplate独立ではなく、ミスマッチ塩基が導入しなければ反応が正常に進行しない。今回のミスマッチ塩基の導入部分を図1で示す。</p>
+							
+		<div class="figure">
+			<img src="../img/SFigure1.png">
+			<p>figure1: ミスマッチ塩基の導入部分囲われた部分がミスマッチとなっている</p>
+		</div>
+							
+		<p>このミスマッチ塩基を導入したReleaserおよびTemplateが同時に投入したときReleaserとTemplateが反応するかをNupackで確認する。その結果を図2に示す。微量は目的と違う鎖が現れているが、濃度でいえば誤差の範囲といえる。そのため、初期状態は生成可能であると言える。</p>
+							
+		<div class="figure">
+			<img src="../img/SFigure2.png">
+			<p>figure2: 初期状態の濃度(Releaser=１[μM]、Template＝１[μM])</p>
+		</div>
+							
+		<p>2.に関して</p>
+		<p>AとInput、BとInputを投入しそれぞれ結合しないかを確認する。それをNupackで調べた結果を図3および図4に示す。若干の結合は見られるが実験には影響しない量であると考えられる。</p>
+							
+							
+		<div class="figure">
+			<img src="../img/SFigure3.png">
+			<p>figure3: AとInputの投入結果(A=１[μM]、Input＝１[μM])</p>
+		</div>
+							
+		<div class="figure">
+			<img src="../img/SFigure4.png">
+			<p>figure4: BとInputの投入結果(B=１[μM]、Input＝１[μM])</p>
+		</div>
+							
+		<p>この①、②両方とも満たされているため、今回の実験において誤った反応が起きる可能性は低いことが言える</p>
+							
+		<p>http://www.nupack.org/partition/newこちらのサイトを利用させていただいた。</p>
+		<p>(注意：スキーム図に合わせた形で書いているため、AとBが入れ替わっています。この文章中及び図中での誤りはないですが他のデータとすり合わせるときは気を付けてください)</p>
 	</div>
 		
 		
@@ -162,6 +211,7 @@
 		<h1>References</h1>
 		<div class="space"></div>
 	</div>
+						
 	</main>
 
 
