@@ -34,7 +34,6 @@
 </head>
 
 
-
 <body>
 	<!--ハンバーガーメニュー-->
 	<div class="navToggle">
@@ -74,7 +73,7 @@
 				<ul>
 					<li><a href="../Project/Project.html#Background">Background</a></li>
 					<li><a href="../Project/Project.html#TheProblem">The Problem</a></li>
-					<li><a href="../Project/Project.html#Idea">Our idea</a></li>
+					<li><a href="../Project/Project.html#Idea">Our Idea</a></li>
 				</ul>
 				</div>
 			</li>
@@ -83,8 +82,8 @@
 				<div>
 				<ul>
 					<li><a href="../Design/Design.html#Mechanism">Mechanism</a></li>
+					<li><a href="../Design/Design.html#DSD">DNA strand displacement reaction</a></li>
 					<li><a href="../Design/Design.html#DNAo">DNA origami</a></li>
-					<li><a href="../Design/Design.html#DSD">DNA strand displacement network</a></li>
 				</ul>
 				</div>
 			</li>
@@ -92,8 +91,8 @@
 				<a href="../Simulation/Simulation.html">Simulation <span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Simulation/Simulation.html#cadnano">cadnano</a></li>
-					<li><a href="../Simulation/Simulation.html#nupack">nupack</a></li>
+					<li><a href="../Simulation/Simulation.html#nupack">Simulation of strand displacement reaction by nupack</a></li>
+					<li><a href="../Simulation/Simulation.html#cadnano">Simulation of DNA origami by caDNAno</a></li>
 				</ul>
 				</div>
 			</li>
@@ -101,9 +100,9 @@
 				<a href="../Experiment/Experiment.html">Experiment <span class="caret"></span></a>
 				<div>
 				<ul>
-					<li><a href="../Experiment/Experiment.html#DSDr">DSD</a></li>
-					<li><a href="../Experiment/Experiment.html#DNAo">DNAo</a></li>
-					<li><a href="../Experiment/Experiment.html#san">DSD on DNAo</a></li>
+					<li><a href="../Experiment/Experiment.html#DNAo">DNA strand displacement reaction</a></li>
+					<li><a href="../Experiment/Experiment.html#DSDr">DNA origami</a></li>
+					<li><a href="../Experiment/Experiment.html#san">DNA strand displacement reaction on the DNA origami</a></li>
 				</ul>
 				</div>
 			</li>
@@ -115,7 +114,7 @@
 					<li><a href="../Discussion/Discussion.html#ELSI">ELSI</a></li>
 				</ul>
 				</div>
-			</li>							
+			</li>
 			<li><a href="../Team/Team.html">Team</a></li>
 		</ul>
 		</div>
@@ -129,9 +128,8 @@
 			<li><a href="#Top"><h1>Design</h1></a></li>
 			<ul id="navi">
 				<li><a href="#Mechanism">Mechanism</a></li>
+				<li><a href="#DSD">DNA strand displacement reaction</a></li>
 				<li><a href="#DNAo">DNA origami</a></li>
-				<li><a href="#DSD">DNA strand displacement</a></li>
-				<li><a href="#References">References</a></li>
 			</ul>
 		</div>
 	</div>
@@ -163,6 +161,23 @@
 		<p>※鎖置換反応については簡略化している</p>
 	</div>
 	
+	<div class="section1"  id="DSD">
+		<h1>DNA strand displacement reaction</h1>
+		<div class="space"></div>
+		<p>鎖置換反応を用いてDNAoに機能を付与していくが、今回付与したい機能は以下のとおりである。</p>
+		<ol>
+			<li>消光分子と蛍光分子を結合させる機能</li>
+			<li>結合した後消光分子と蛍光分子を解離させ、再び蛍光分子が消光分子と結合できる状態に戻る機能</li>
+		</ol>
+		<p>これらの機能を付与するシステムを実現する反応経路図を図２に示す。初めに蛍光分子を修飾したA(AはDNAo内に存在する)と消光分子を修飾したBが結合する。それと同時にInputとGate1のDNA鎖が結合する。その鎖置換反応に伴い、もともとGate1に結合していたReleaserが遊離する。遊離したReleaserがBと結合することにより、再びBは一本鎖に戻る。この一連の流れをたどることによって今回付与したい機能を実現していく。</p>
+							
+		<div class="figure">
+			<img src="../img/DFigure3.png">
+			<p>figure4: 今回のプロジェクトにおけるスキーム図</p>
+		</div>
+							
+		<p>しかし、スキーム図を基に考えるとReleaser鎖とTemplate鎖は独立しており、このままではGateを生成することは不可能である。かといって完全相補な鎖を生成してしまうと今度はReleaser鎖がはがれず反応が正常に行われない。そこで、ミスマッチ塩基対を導入していく。Gate二重鎖は完全に結合するわけではなく、ある程度の結合を行いかつ以降の反応も正常に行われていく。</p>
+	</div>
 	
 	<div class="space" id="subA"></div>
 
@@ -173,7 +188,7 @@
 		<p>・DNA折り紙上にssDNAを配置する設計</p>
 		<p>この配置について説明するためにDNA折り紙について、大きさ、形、ssDNA配置の制御間隔について言及する。</p>
 		<div class="space"></div>
-		<p>DNA折り紙については多くの論文で使用されている信用性の高いものを使用した。ScaffoldにはM13(7249塩基)を用いて、Stapleには一部除き32塩基のDNAを用いた。Stapleの全体の配列はsupplementinformationに示す。</p>
+		<p>DNA折り紙については多くの論文で使用されている信用性の高いものを使用した。[1]ScaffoldにはM13(7249塩基)を用いて、Stapleには一部除き32塩基のDNAを用いた。Stapleの全体の配列はsupplementinformationに示す。</p>
 		<div class="btnblock">
 			<a href="../SI/SI.html">
 				<button type="submit" class="btn">Supplement information</button>
@@ -196,35 +211,6 @@
 			<p>115&emsp;	CCTAATTTACGCTAACGAGCGTCTAATCAATA <font color="green">TTT</font> <font color="red">GGAGTGATGTGATGGGATGGTGATG</font></p>
 		</div>
 		<p>figure3: 延長したDNAの配列：色のついた塩基が延長箇所、赤色の塩基がハイブリダイゼーションドメイン。緑色の塩基は折り紙と延長塩基間の間に余裕を持たせている。</p>
-	</div>
-		
-	<div class="section1"  id="DSD">
-		<h1>DNA strand displacement</h1>
-		<div class="space"></div>
-		<p>鎖置換反応を用いてDNAoに機能を付与していくが、今回付与したい機能は以下のとおりである。</p>
-		<ol>
-			<li>消光分子と蛍光分子を結合させる機能</li>
-			<li>結合した後消光分子と蛍光分子を解離させ、再び蛍光分子が消光分子と結合できる状態に戻る機能</li>
-		</ol>
-		<p>これらの機能を付与するシステムを実現する反応経路図を図２に示す。初めに蛍光分子を修飾したA(AはDNAo内に存在する)と消光分子を修飾したBが結合する。それと同時にInputとGate1のDNA鎖が結合する。その鎖置換反応に伴い、もともとGate1に結合していたReleaserが遊離する。遊離したReleaserがBと結合することにより、再びBは一本鎖に戻る。この一連の流れをたどることによって今回付与したい機能を実現していく。</p>
-							
-		<div class="figure">
-			<img src="../img/DFigure3.png">
-			<p>figure4: 今回のプロジェクトにおけるスキーム図</p>
-		</div>
-							
-		<p>しかし、スキーム図を基に考えるとReleaser鎖とTemplate鎖は独立しており、このままではGateを生成することは不可能である。かといって完全相補な鎖を生成してしまうと今度はReleaser鎖がはがれず反応が正常に行われない。そこで、ミスマッチ塩基対を導入していく。Gate二重鎖は完全に結合するわけではなく、ある程度の結合を行いかつ以降の反応も正常に行われていく。</p>
-	</div>
-
-		
-	<div class="section1"  id="References">
-		<h1>References</h1>
-		<div class="space"></div>
-
-		<ol>
-			<li>Jinglin Fu, Minghui Liu, Yan Liu, Neal W. Woodbury, and Hao Yan, "Interenzyme Substrate Diffusion for an Enzyme Cascade Organizedon Spatially Addressable DNA Nanostructures", JACS, 2012, https://pubs.acs.org/doi/abs/10.1021/ja300897h</li>
-		</ol>
-
 	</div>
 	</main>
 
