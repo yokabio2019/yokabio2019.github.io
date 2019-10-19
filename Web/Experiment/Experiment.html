@@ -154,73 +154,63 @@
 		<h1>Experiment of DNA strand displacement reaction</h1>
 		<div class="space"></div>
 		<h2>Material&Methods</h2>
-		<p>DNAの設計と、二次構造の評価ができるNUPACKを用いて、上のスキーム図にあるDNAを設計しました。</p>
+		<p>The DNA shown in the above scheme was designed using NUPACK, which can evaluate secondary structure.</p>
 		<div class="figure">
 			<p>Table1: 使用したDNAの塩基配列</p>
 			<img src="../img/ETable1.png">
 		</div>
 							
-		<h2>Result</h2>	
-		<p>１.実験濃度について</p>
-		<p>上のDNAをそれぞれ以下の濃度になるまで1.25%MgClを添加したTris-EDTAバッファを用いて２０°Cで希釈して使用しました</p>
-		<div class="figure">
-			<p>Table2: 実験１のDNAの濃度</p>
-			<img src="../img/ETable2.png">
-		</div>
-		<div class="figure">
-			<p>Table3: 実験２のDNA濃度</p>
-			<img src="../img/ETable3.png">
-		</div>
-		<div class="figure">
-			<p>Table4: 実験２のDNA濃度</p>
-			<img src="../img/ETable4.png">
-		</div>
-		<p>2.アニーリング</p>
-		<p>サーマルサイクラー(ASTEC325:GeneAtlas)を用いて、Gateを９５°Cに加熱し、９５〜２０°C(-1°C/min)でアニーリングしました。</p>
-		<img src="../img/EFigure1.jpg"  width="40%">
-		<div class="figure">
-			<p>Figure1: サーマルサイクラー</p>
-		</div>
-		<p>3.蛍光強度測定</p>
-		<p>蛍光分光光度計(JASCO:FP-8300)を用いて、蛍光強度を１分間隔で測定しました。</p>
-		<img src="../img/EFigure2.jpg" width="40%">
-		<div class="figure">
-			<p>Figure2: 蛍光分光光度計</p>
-		</div>
-		<p>反応の確認に関しては、FRETを利用して確認しました。Aの５’末端にFAM、Bの３’末端にBHQ１を修飾し、OFF状態の場合、AとBが２本鎖になり、蛍光が吸収されます。ON状態の時は、Aは一本鎖の状態のため、蛍光を発します。</p>
+		<p>・ Experiment of strand displacement reaction</p>
+		<ol>
+			<li>Experimental concentration</li>
+			<p>DNA sequences that shown above was diluted at 20 ° C with Tris-EDTA buffer supplemented with 1.25% MgCl until the following concentrations on table 1 and 2 are obtained.</p>
+			<div class="figure">
+				<p>Table2: 使用したDNAの塩基配列</p>
+				<img src="../img/ETable2.png">
+			</div>
+			<div class="figure">
+				<p>Table3: 使用したDNAの塩基配列</p>
+				<img src="../img/ETable3.png">
+			</div>
+			<div class="figure">
+				<p>Table4: 使用したDNAの塩基配列</p>
+				<img src="../img/ETable4.png">
+			</div>
+			<li>Annealing</li>
+			<p>Using a thermal cycler (ASTEC325: GeneAtlas), Gate is heated to 95 ° C and annealed at 95-20 ° C (-1 ° C / min).</p>
+			<li>Fluorescence intensity measurement</li>
+			<p>Fluorescence intensity was measured at 1 minute intervals using a fluorescence spectrophotometer (JASCO: FP-8300).</p>
+		</ol>
+		<p>The reaction was confirmed using FRET. FAM and BHQ1 is modified respectively to the 5’ end of A and 5’ end of B. In the OFF state, A and B become double-stranded and absorb fluorescence. In the ON state, A is in a single-strand state cause it to emit fluorescence.</p>
 							
-		<p>・機器</p>
-		<p>以下に示す企業から機器を購入しました。</p>
+		<h2>Experiment result</h2>	
+		<p><b>Experiment1</b></p>
+		<p>First, two lights which is B and Releaser that will be quenched is input to verify whether the ON / OFF reaction works.</p>
+		<p>The releaser was added 1800 seconds after the quencher molecule B is added, and the progress is observed.</p>
 		<div class="figure">
-			<p>Table5: 機器</p>
-			<img src="../img/ETable5.png">
+			<p>Table1: 使用したDNAの塩基配列</p>
+			<img src="../img/EFigure1.png">
 		</div>
-							
-		<p>Operation Experiment</p>
-		<p>実験１</p>
-		<p>まず、消光させるBとReleaserの２本を別々にインプットし、ON、OFFの反応が機能するかを検証した。</p>
-		<p>消光分子Bを投入した３０分後にReleaserを投入し、経過を観察した/p>
-		<div class="figure">
-			<img src="../img/EFigure3.png">
-			<p>Figure3: Inputを手動で投入した実験グラフ</p>
-		</div>
-		<p>以上の結果から、蛍光・消光の反応が起こっていることが確認できた。</p>
-								
-		<p>実験２</p>
+		<p><b>Experiment2</b></p>
+		<p>Experiment of ON / OFF circuit using single strand DNA.</p>
+		
+		<div class="space"></div>
 		<p>2.1</p>
-		<p>１本鎖を用いたON,OFF回路の実験/p>
+		<p>Experiment with the same concentration of A, B, Gate, and Input</p>
 		<div class="figure">
-			<img src="../img/EFigure4.png">
-			<p>Figure4: 2.1の実験を３回行った平均のグラフ</p>
+			<p>Table1: 使用したDNAの塩基配列</p>
+			<img src="../img/EFigure2.png">
 		</div>
-		<p>１、２の実験を比較すると、ON,FFの反応はうまくいっていると考えられる。しかし、最終的な蛍光強度は実験前の値より低い結果となった。これは、実験の際のGateとInputの濃度により左右されると考えられた。次のグラフは、GateとInputの濃度を大きくして実験した際の結果である。</p>
-									
+		<p>The results for experiments 1 and 2 are compared and is shown that the ON/OFF reaction is working well. However, the final fluorescence intensity was lower than the value before the experiment. This result can be concluded that it depends on the concentration of Gate and Input during the experiment. The following graph shows the results when the concentration of Gate and Input is increased.</p>
+		<div class="space"></div>
 		<p>2.2</p>
+		<p>experimenting with the density of Gate and Input 1.5 times the density of A and B</p>
 		<div class="figure">
-			<img src="../img/EFigure5.png">
-			<p>Figure5: 実験2.1の結果グラフ</p>
+			<p>Table1: 使用したDNAの塩基配列</p>
+			<img src="../img/EFigure3.png">
 		</div>
-		<p>以上の結果から、2.1の結果に比べて収束値は高くなっているが、完全に元に戻すことはできなかった。また、Releaserの濃度が高くなっているため、収束までの時間が短くなった。また、収束後徐々に蛍光強度が下がっているが、これは時間経過に伴う蛍光分子の劣化だと考えられる。</p>
+		<p>From the above results, although the convergence value is higher than the result of 2.1, it could not be completely restored. Also, since the concentration of Releaser is high, the time until convergence is shortened.</p>
+		<p>In addition, the fluorescence intensity gradually decreases after convergence, which is considered that the fluorescent molecules to be retrograded over time.</p>
 	</div>
 						
 								

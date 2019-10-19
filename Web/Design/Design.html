@@ -152,31 +152,31 @@
 	<div class="section1"  id="Mechanism">
 		<h1>Mechanism</h1>
 		<div class="space"></div>
-		<p>私たちはDNA折り紙上で蛍光の鎖置換反応を用いたON/OFFを行うための設計を行った。DNA折り紙は単純な2次元構造を考えるため、DNA折り紙で作られた四角形のplateを作成する。DNA折り紙プレート上には蛍光分子の付着した一本鎖DNAAが固定されており、この状態では蛍光分子はON状態となり、蛍光物質は発光する（図1a）。このあと、消光分子のついたssDNABを投入することで,DNA Bが折り紙上のDNAAとハイブリダイゼーションしてdsDNAA-Bを形成する。この時、蛍光分子と消光分子が接近することで蛍光は消え、OFF状態となる（図1b）。最後にまたDNAReleaserによってdsDNAA-Bから消光分子のついたDNAがひきはがされ、最初の状態に戻る(図1a)</p>
+		<p>We designed to turn fluorescence on and off using a strand displacement reaction on DNAo.</p>
+		<p>Because of DNAo has a simple two-dimensional structure, we create a rectangle plate made of DNA origami. First, single-strand DNA (ssDNA) A with fluorescent molecules attached is fixed on a DNAo plate. In this state, the fluorescent molecule is turned on, and the fluorescent substance emits light (Fig. 1a). After that, by adding ssDNA B with a quencher molecule, DNA B hybridizes with DNA A on origami to form double-strand DNA (dsDNA) A-B. At this time, the fluorescent molecule and the quencher molecule approach each other, the fluorescence disappears and turns OFF (FIG. 1b). Finally, DNA B with a quencher molecule is peel away from dsDNA A-B by DNA Releaser, returning to the initial state (Figure 1a).</p>
 							
 		<div class="figure">
 			<img src="../img/DFigure1.png">
-			<p>figure1: メカニズム</p>
+			<p>figure1: Mechanism</p>
 		</div>
-		<p>※鎖置換反応については簡略化している</p>
 	</div>
 	
 	<div class="section1"  id="DSD">
 		<h1>DNA strand displacement reaction</h1>
 		<div class="space"></div>
-		<p>鎖置換反応を用いてDNAoに機能を付与していくが、今回付与したい機能は以下のとおりである。</p>
+		<p>We added some functions to DNAo using strand displacement reaction. These functions are as follows.</p>
 		<ol>
-			<li>消光分子と蛍光分子を結合させる機能</li>
-			<li>結合した後消光分子と蛍光分子を解離させ、再び蛍光分子が消光分子と結合できる状態に戻る機能</li>
+			<li>A function to combine quencher molecule and a fluorescent molecule.</li>
+			<li>A function to dissociate the quencher molecule and the fluorescent molecule after binding, and return the fluorescent molecule to the state where it can bind to the quencher molecule again.</li>
 		</ol>
-		<p>これらの機能を付与するシステムを実現する反応経路図を図２に示す。初めに蛍光分子を修飾したA(AはDNAo内に存在する)と消光分子を修飾したBが結合する。それと同時にInputとGate1のDNA鎖が結合する。その鎖置換反応に伴い、もともとGate1に結合していたReleaserが遊離する。遊離したReleaserがBと結合することにより、再びBは一本鎖に戻る。この一連の流れをたどることによって今回付与したい機能を実現していく。</p>
+		<p>FIG. 2 shows a reaction path scheme to achieve a system that provides these functions. First, the fluorescent molecule modified A strand that exists in DNAo is bind to the quencher molecules modified B strand. At the same time, the DNA strands of Input and Template which is the bottom part of Gate1 is also bound. Along with the strand displacement reaction, the releaser strand originally bound to Gate1 is released. When the released releaser strand binds to B, A returns to a single strand again. By following this series of flows, the functions that we want to add can be achieved.</p>
 							
 		<div class="figure">
 			<img src="../img/DFigure3.png">
-			<p>figure4: 今回のプロジェクトにおけるスキーム図</p>
+			<p>Figure4: the scheme about this project</p>
 		</div>
 							
-		<p>しかし、スキーム図を基に考えるとReleaser鎖とTemplate鎖は独立しており、このままではGateを生成することは不可能である。かといって完全相補な鎖を生成してしまうと今度はReleaser鎖がはがれず反応が正常に行われない。そこで、ミスマッチ塩基対を導入していく。Gate二重鎖は完全に結合するわけではなく、ある程度の結合を行いかつ以降の反応も正常に行われていく。</p>
+		<p>However, if the state is the same as the diagram above, the Input and B strand will be complementing each other resulting in an unintended reaction. So, a mismatched base pair is used to design a sequence that will prevent B and Input to bind to each other. Figure 3 below shows the redesign of the scheme diagram in figure 2 by using mismatched base pairs. </p>
 	</div>
 	
 	<div class="space" id="subA"></div>
@@ -184,24 +184,23 @@
 	<div class="section1"  id="DNAo">
 		<h1>DNA origami</h1>
 		<div class="space"></div>
-		<p>DNAoに機能を付与するために次の設計を必要とする</p>
-		<p>・DNA折り紙上にssDNAを配置する設計</p>
-		<p>この配置について説明するためにDNA折り紙について、大きさ、形、ssDNA配置の制御間隔について言及する。</p>
+		<p>The following design is required to add functions to DNAo.</p>
+		<p>・ Design to place ssDNA on the DNAo</p>
+		<p>To describe this arrangement, we will refer to DNA origami about size, shape, and control interval of ssDNA arrangement.</p>
 		<div class="space"></div>
-		<p>DNA折り紙については多くの論文で使用されている信用性の高いものを使用した。[1]ScaffoldにはM13(7249塩基)を用いて、Stapleには一部除き32塩基のDNAを用いた。Stapleの全体の配列はsupplementinformationに示す。</p>
+		<p>For DNA origami, we used highly reliable DNA origami used in many papers [1][2]. In addition, M13 (7249 bases) was used for Scaffold, and DNA with a partial alias of 32 bases was used for Staple. The entire sequence of Staple is shown in supplement information.</p>
 		<div class="btnblock">
-			<a href="../SI/SI.html">
+			<a href="../SI/SI.html#array">
 				<button type="submit" class="btn">Supplement information</button>
 			</a>
 		</div>
 							
 		<div class="figure">
 			<img src="../img/DFigure2.png">
-			<p>figure2: DNA折り紙plate（画像は仮）</p>
+			<p>figure2: DNA origami plate</p>
 		</div>
 							
-		<p>のDNAoの大きさは横約85nm縦約50nmの長方形となっている。scaffoldを織り込むためのstapleは横10nm、縦10nmの間隔で配置され、このstapleの配列を延長することでDNAプレート上にDNAを配置できる。そのため、ssDNA配置の制御間隔は10nmとなっている。今回は102,103,114,115の４つのstapleを延長した。１つではなく４つのstapleを延長した理由は１つでは蛍光と消光の差を明確に得られないのではないかと考えたからである。また、蛍光の数に対して折り紙の一部分しか使用していない理由は、我々の考える
-応用（画素子など）と条件を同じとするために今回は比較的大きなDNA折り紙を用いた。延長後の配列を図3に示す</p>
+		<p>The size of this DNAo is a rectangle with a width of about 110 nm and a length of about 70 nm. Staples for weaving scaffolds are arranged at intervals of 5~10 nm in width and 5~10 nm in length, and ssDNA can be placed on the DNAo plate by extending the sequence of this staple. Therefore, the control interval of ssDNA arrangement is 5~10 nm. This time, the four staples are extended to place on the DNAo. The reason for extending four staples instead of one was that one could not clearly obtain the difference between fluorescence and quenching. The reason why only a part of origami is used for the number of fluorescent light is that a relatively large DNA origami was used this time in order to make the conditions the same as our application (image element etc.). Fig. 3 shows the sequence after extension.</p>
 							
 		<div class="array">
 			<p>name&emsp;Sequence</p>
@@ -210,7 +209,7 @@
 			<p>114&emsp;	ATCGGCTGCGAGCATGTAGAAACCTATCATAT <font color="green">TTT</font> <font color="red">GGAGTGATGTGATGGGATGGTGATG</font></p>
 			<p>115&emsp;	CCTAATTTACGCTAACGAGCGTCTAATCAATA <font color="green">TTT</font> <font color="red">GGAGTGATGTGATGGGATGGTGATG</font></p>
 		</div>
-		<p>figure3: 延長したDNAの配列：色のついた塩基が延長箇所、赤色の塩基がハイブリダイゼーションドメイン。緑色の塩基は折り紙と延長塩基間の間に余裕を持たせている。</p>
+		<p>figure3: Extended DNA sequence: The colored base is the extension site and the red base is the hybridization domain. The green base has a margin between the DNAo and the extended base.</p>
 	</div>
 	</main>
 

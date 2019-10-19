@@ -152,58 +152,83 @@
 	<div class="section1"  id="nupack">
 		<h1>Simulation of DNA strand displacement reaction by nupack</h1>
 		<div class="space"></div>
-		<p>本プロジェクトでは、初めにA(及びAと結合するDNAo)とGateを生成した初期状態にBおよびInputを注入することで反応が開始することを想定している。したがって、図２の反応を確実に起こしてもらうためには以下のすべてを満たす必要がある。</p>
+		<p> In this project, we assumed that the reaction starts by injecting B and Input into the initial state of A (and DNAo that binds to A) and Gate.
+Therefore, in order for the reaction shown in figure 2 is achieved, the conditions below must be required.
+</p>
 		<ol>
-			<li>初期状態でGate部分がしっかりと結合している</li>
-			<li>InputがGate以外と結合しない</li>
+			<li>The Gate part is firmly bind in the initial state.</li>
+			<li>Input does not combine with any strand other than Gate.</li>
 		</ol>
-		<p>以上の二つを満たすように各塩基配列を下のようにした。その後、各条件について調べていく</p>
+		<p>Each base sequence was set as follows to meet above conditions. After that, a research is performed for each condition to confirm these conditions are achieved.</p>
 							
+		<div class="space"></div>
 		<p>A：GAGTGATGTGATGGGATGGTGATG</p>
 		<p>B：CATCACCATCCCATCACATCACTCCTCAAC</p>
 		<p>Input：GAGTAGTTAAGAAGTAATATGATAGAATAGTAATG</p>
-		<p>Releaser(Gate上鎖)：GTTGAGGAGTGATGTGATGGGATGGTGATG</p>
-		<p>Template(Gate下鎖)：CATTACTATTCTATCATATTACTTCTTAACTACTC</p>
+		<p>Releaser(Gate top strand)：GTTGAGGAGTGATGTGATGGGATGGTGATG</p>
+		<p>Template(Gate bottom strand)：CATTACTATTCTATCATATTACTTCTTAACTACTC</p>
+		<div class="space"></div>
 							
-		<p>1.に関して</p>
-		<p>Designでも述べたが、ReleaserとTemplate独立ではなく、ミスマッチ塩基が導入しなければ反応が正常に進行しない。今回のミスマッチ塩基の導入部分を図1で示す。</p>
+		<p>Regarding (1)</p>
+		<p>As described in Design, Releaser and Template are independent, and the reaction will not proceed normally unless a mismatch base pair is introduced. The introduction part of this mismatch base pair is shown in figure 3.</p>
 							
 		<div class="figure">
 			<img src="../img/SFigure1.png">
-			<p>figure1: ミスマッチ塩基の導入部分囲われた部分がミスマッチとなっている</p>
+			<p>Figure1: The introduction of mismatch base pair.  The enclosed part is mismatched base pair </p>
 		</div>
 							
-		<p>このミスマッチ塩基を導入したReleaserおよびTemplateが同時に投入したときReleaserとTemplateが反応するかをNupackで確認する。その結果を図2に示す。微量は目的と違う鎖が現れているが、濃度でいえば誤差の範囲といえる。そのため、初期状態は生成可能であると言える。</p>
+		<p>Nupack is used to confirm whether the Releaser strand and Template strand react when the mismatched base pairs are simultaneously added to the both of the Releaser strand and Template strand. If reaction happens and a Gate strand is generated, a lot of Template-Releaser strands will be appeared. Figure 4 shows the both of the hypothesis mentioned and the Nupack simulation result. From this figure, it can be seen that 1 μM of a double strand (Template-Releaser) is generated based on the Template and Releaser. A small amount of the strand appears at the bottom, which is different from the intended purpose as the amount of concentration is too small. Therefore, it can be said that the gate can be generated.</p>
 							
 		<div class="figure">
 			<img src="../img/SFigure2.png">
-			<p>figure2: 初期状態の濃度(Releaser=１[μM]、Template＝１[μM])</p>
+			<p>Figure2: the concentration of initial state(Releaser=１[μM]、Template＝１[μM])</p>
 		</div>
 							
-		<p>2.に関して</p>
-		<p>AとInput、BとInputを投入しそれぞれ結合しないかを確認する。それをNupackで調べた結果を図3および図4に示す。若干の結合は見られるが実験には影響しない量であると考えられる。</p>
-							
+		<p>Regarding (2)</p>
+		<p>Input strand is inserted respectively to the A strand and B strand, then is confirmed whether both of the double strands are not combined. The Nupack data result is shown in figure 5 and 6. Based on figure 5, a combination of A strand and Input strand is not generated, shows that no double strand is formed even though both of the strands is mixed together. In addition, based on figure 6, the production of a double strand of B strand and Input is slightly can be seen but it does not affect the experiment as the concentration is too lower. In other words, it can be seen that B-Input combining is almost not performed.</p>
 							
 		<div class="figure">
 			<img src="../img/SFigure3.png">
-			<p>figure3: AとInputの投入結果(A=１[μM]、Input＝１[μM])</p>
+			<p>Figure3: A and Input(A=１[μM]、Input＝１[μM])</p>
 		</div>
 							
 		<div class="figure">
 			<img src="../img/SFigure4.png">
-			<p>figure4: BとInputの投入結果(B=１[μM]、Input＝１[μM])</p>
+			<p>Figure4: B and Input(B=１[μM]、Input＝１[μM])</p>
 		</div>
 							
-		<p>この①、②両方とも満たされているため、今回の実験において誤った反応が起きる可能性は低いことが言える</p>
+		<p>Since both (1) and (2) are achieved, it can be said that there is a low possibility of an unintended reaction in this experiment.</p>
 							
-		<p>http://www.nupack.org/partition/newこちらのサイトを利用させていただいた。</p>
-		<p>(注意：スキーム図に合わせた形で書いているため、AとBが入れ替わっています。この文章中及び図中での誤りはないですが他のデータとすり合わせるときは気を付けてください)</p>
+		<p>used by Nupack URL <a href="http://www.nupack.org/partition/new">http://www.nupack.org/partition/new</a></p>
 	</div>
 		
 		
 	<div class="section1"  id="cadnano">
 		<h1>Simulation of DNA origami by caDNAno</h1>
 		<div class="space"></div>
+		<p>※This time, considering the time required for the experiment, the DNA origami designed by us could not be used in the experiment. However, since we originally planned to use the DNA origami we simulated, we listed here as the simulation results.</p>
+		<div class="space"></div><div class="space"></div>
+							
+		<p>For the simulation of DNA origami, based on the figure in Design section, the plan is designed by using caDNAno and the result is output to CanDo. The design is based on the M13(7249) used in the experiment with 20 helices and a helix length of 332 bases. The transfer part of the scaffold and staples are placed in appropriate positions. The design is shown in Figure 1.  </p>
+		<div class="figure">
+			<img src="../img/SFigure5.png">
+			<p>Figure5:</p>
+		</div>
+		<p>The results of outputting the design designed by caDNAno to CanDo are shown in Figure 2 and 3. It shows that it becomes unstable as it turns red, and that it becomes stable as it turns blue. The validity of the design of DNA origami is confirmed.</p>
+		<div class="figure">
+			<img src="../img/SVideo1.mp4">
+			<p>Figure6:</p>
+		</div>
+		<div class="figure">
+			<img src="../img/SFigure6.png">
+			<p>Figure7:</p>
+		</div>
+		<p>The following supplementary information about simulation of other angle of DNAo.</p>
+		<div class="btnblock">
+			<a href="../SI/SI.html#cadnano">
+				<button type="submit" class="btn">Supplement information</button>
+			</a>
+		</div>
 	</div>
 	</main>
 
