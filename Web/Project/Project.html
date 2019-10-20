@@ -153,7 +153,7 @@
 		<h1>Background</h1>
 		<div class="space"></div>
 		<h2>DNA origami</h2>
-		<p>DNA  origamiは、ナノスケールで非任意の2次元及び3次元状の機構を作成するDNAの折りたたみ構造である。相補的な塩基対間の相互作用の特異性をもって、DNAをその塩基配列の設計を通じて有用な建設材料にする。そのプロセスの過程で用いるのは、構成形成の足場となるscaffold鎖と呼ばれる長鎖の一本鎖DNAとstaple鎖と呼ばれる多数の短鎖の一本鎖DNAである。Staple鎖は通常32塩基の長さをもち、ホッチキスの針のように狙い通りの平面構造に固定する役割を果たす。これを様々な場所で行い、その結果、あらかじめ設計していた2次元または3次元形状をもたらす。DNAに蛍光材料(蛍光分子等)を結合させることで、設計したDNA origamiは、電子顕微鏡、原子力顕微鏡などを用いて直接観察が可能である。</p>
+		<p>DNA origami is a DNA folding structure that creates non-arbitrary two-dimensional or three-dimensional mechanisms at the nanoscale. With the specificity of the interaction between complementary base pairs, DNA becomes a useful material through the design of its base sequence. In the process, we use a long single-stranded DNA called scaffold chain and a large number of short single-stranded DNA called staple chains as scaffolds for the formation of structures. Staple strands usually have a length of 32 bases and fix the desired planar structure like a staple.  We do this in various places, resulting in a pre-designed 2D or 3D shape. By binding fluorescent materials (fluorescent molecules, etc.) to DNA, the designed DNA origami can be directly observed using an electron microscope, an atomic force microscope, or the like.</p>
 							
 		<h2>DNA strand displacement reaction</h2>
 		<p>DNA strands bind to more complementary and stable strands. Utilizing this property, a reaction occurs in which one strand of double-stranded DNA exchanged with another single strand. This reaction is known as strand displacement reaction. By using this reaction, operations and logic gates can be constructed, and various functions can be imparted at the nanoscale. However, if this reaction is used, an undesired form of reaction may occur, which leads to the disadvantage of being difficult to use. This disadvantage can be eliminated by using mismatched base pairs, and the correct reaction can be achieved.</p>
@@ -162,8 +162,8 @@
 			<p>Figure1: model of DNAstrand displacement reaction</p>
 		</div>
 							
-		<h2>Mismatch base pair</h2>
-		<p>Usually, DNA double-stranded formed by the binding of the complemented of cytosine (C) with guanine (G), and adenine (A) with thymine (T). Conversely, the combination of C and A, or G and T is weak. This weak combination is called a mismatch base pair. By using mismatched base pairs, the possibility of an unexpected reaction can be greatly reduced, and the intended reaction can be easily obtained. However, since the part that is difficult to bond to the double-strand appears, the force at the time of bonding becomes weaker than the original, and the strength remains uneasy.</p>
+		<h2>Mismatched base pair</h2>
+		<p>Usually, DNA is complemented with cytosine (C) and guanine (G), adenine (A) and thymine (T), and these form a double-stranded form by binding. Conversely, C and A combine weakly. This weakly combination is called mismatched base pair. By using mismatched base pairs, we reduce greatly the possibility of an unexpected reaction, and the intended reaction can be easily obtained. However, since a portion that is difficult to bond to the double-stranded appears, the force at the time of bonding becomes weaker than the original, and the strength remains uneasy.</p>
 	</div>
 	
 	
@@ -172,7 +172,9 @@
 	<div class="section1"  id="TheProblem">
 		<h1>The Problem</h1>
 		<div class="space"></div>
-		<p>DNAorigamiによって表現されてきた2次元機構は、これまでdesign・表現の一つとして利用されてきた。例えば、スマイリーフェイスや地図といった類である。しかしながら、DNAorigami自体に機能をもっているものの多くは3次元で構成されているものである。例えば、中空の3次元構造をつくることでBoxの役割を果たすものや、平面構造をひだ状に重ねた構造をつくることで鳥かご状の構造をつくり、近年では、リボソームに穴を開けるイオンチャンネルの機能を持つ構造体などもつくられている。その一方で、2次元で構成されたDNA  origamiに生化学的で有用な機能をもっているものは少ない。そこで、2次元のDNAorigamiを用いてよりindustrialな使い方はできないのか、と提案したい。</p>
+		<p>The two-dimensional mechanism expressed by DNA origami has been used as a design /expression. For example, a smiley face or a map. However, many of the DNA origami functions have a three-dimensional structure. For example, the role of Box by creating a hollow three-dimensional structure, or the structure of a birdcage by creating planar structures with pleated. Structures with functions are also made. On the other hand, few DNA origami composed in two dimensions have biochemical and useful functions. Therefore, We were wondering if it could be used more industrially with 2D DNA origami.</p>
+		<div class="space"></div>
+		<p>Then we found the competition, called “NanoCar race. There are literally nanoscale car racing events in France. In this event, I run 4 groups at the same time, but there seems to be no signal that means start. If there is a nano-sized car, we thought that it would be better to exist a nano-sized signal. And this time we would like to propose creating a nano-sized signal.</p>
 
 	</div>
 
@@ -180,10 +182,11 @@
 		<h1>Our Idea</h1>
 		<div class="space"></div>
 		<h2>Idea</h2>
-		<p>“DNAorigami上で鎖置換反応を行う”</p>
-		<p>2次元機構のDNA  origamiに機能を持たせるべく、今回は別の反応機構と組み合わせることを考えた。我々のアイデアとしてDNA origami をベースとして２つの物質、蛍光物質と消光物質が反応するような仕組みを構築する。具体的にいうと、消光物質はDNA origami に固定するように設計する。DNA origami は平面構造であるが、その構造から一本鎖が浮遊するようにする。そして、その一本鎖に相補的なDNA鎖と結合した蛍光物質を用意する。両者が結合し二本鎖が完成した(鎖置換反応)後、二つの物質が反応するような仕組みを設計する。消光物質と蛍光物質を用いてこのideaを基にしたExperimentを、段階を踏んで行った。まずは蛍光物質と消光物質を用いた鎖置換反応を行う実験と、浮遊した一本鎖を有したDNA  origamiを作成する実験を別々に行う。そして、これらを組み合わせることによって我々の設計通りになるかどうかを確かめた。</p>
+		<p>It would be desirable if the location can be fixed and turned on and off when producing nano-sized signals. This is the idea we thought of.</p>
+		<p>"Strand Displacement reaction on DNA origami"</p>
+		<p>To give a function to the DNA origami of the two-dimensional mechanism, this time we considered combining with a strand displacement reaction. Based on DNA origami as our idea, we will build a mechanism that allows two substances, a fluorescent substance and a quenching substance to react. Specifically, the fluorescent substance is designed to be fixed to DNA origami. DNA origami is a planar structure, but it makes a single strand appear from the structure. Then, a quencher that binds to a DNA strand complementary to the single strand is prepared. Design a mechanism that allows the two substances to react after the two have been combined to complete the double strand (strand displacement reaction). Experiments based on this idea were carried out step by step using quenchers and fluorescent materials. First, an experiment to perform a strand displacement reaction using a fluorescent substance and a quenching substance and an experiment to create a DNA origami with a single suspended strand are performed separately. And we confirmed whether it would be as designed by combining these.</p>
 		<h2>Merit</h2>
-		<p>紐状の場合、反応距離が一定にならない可能性があり安定性に欠けるが、ベースが存在することで安定性が生まれ反応距離についても計算できる。また、ベースをorigamiにしたのには、樹脂(化学物質を用い合成)の場合は構造式に違いがなく距離が計算できないため設計が困難である。一方、DNAは四つの塩基を基にした配列が存在し、それを基にして距離をはかることが可能であるため利点となる。加えて、DNA  origamiをガラスやシリコンといった原料を用いた板のような基盤となるものの上に作成することができれば、反応後、不要となった一本鎖を洗い流すことができる。これによって、鎖置換反応のリサイクルを可能にすることができる。</p>
+		<p>In the case of the string shape, the desired reaction cannot be obtained at an appropriate timing, but the presence of the planar structure allows the reaction to be performed reliably and the timing can be measured. Also, since the base is origami, in the case of resin (synthesized using chemical substances), there is no difference in the structural formula, and strands are arranged at random, and it is difficult to design the position to be fixed. On the other hand, DNA has a sequence based on four bases, and the position can be designated based on the sequence, which has an advantage. In addition, if DNA origami can be created on a base such as a plate using a raw material such as glass or silicon, it is possible to wash away the unnecessary single strand after the reaction. This allows the recycling of the strand displacement reaction.</p>
 	</div>
 		
 	</main>
